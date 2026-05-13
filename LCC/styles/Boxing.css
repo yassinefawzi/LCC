@@ -1,0 +1,313 @@
+:root {
+  --green: #25503f;
+  --green-text: #25503f;
+  --text-color: #f4f5f7c9;
+  --background: wheat;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.boxing {
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   HERO
+========================= */
+.boxing-hero {
+  position: relative;
+  width: 100%;
+  height: 91vh;
+  overflow: hidden;
+}
+
+.boxing-slider {
+  position: absolute;
+  inset: 0;
+}
+
+.boxing-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+.boxing-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+/* NAV */
+.boxing-nav {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.boxing-arrow {
+  pointer-events: all;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.35);
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.boxing-arrow:hover {
+  transform: scale(1.05);
+  background: rgba(0,0,0,0.5);
+}
+
+.boxing-arrow.left { margin-left: 15px; }
+.boxing-arrow.right { margin-right: 15px; }
+
+/* HERO CONTENT */
+.boxing-content {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.boxing-content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.boxing-content p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.boxing-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.boxing-buttons button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boxing-buttons button:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.boxing-section {
+  padding: 80px 10%;
+}
+
+/* =========================
+   SPACE (GYM)
+========================= */
+.boxing-space {
+  background: var(--green);
+  color: white;
+  text-align: center;
+}
+
+.boxing-space h2{
+	   color: var(--text-color);
+}
+
+.boxing-subtitle {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.8;
+}
+
+.boxing-space-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.space-card {
+  position: relative;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.space-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.space-card:hover img {
+  transform: scale(1.05);
+}
+
+.space-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.35);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   OBJECTIVES (BIG)
+========================= */
+.objectives {
+  background: var(--background);
+  color: var(--green-text);
+}
+
+.objectives h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--green);
+}
+
+.objectives-big-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.objective-big-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.objective-big-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.12);
+}
+
+.objective-big-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.objective-big-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.objective-big-card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* =========================
+   WORKSHOPS
+========================= */
+.workshops-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.workshop-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.workshop-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.workshop-content {
+  padding: 15px;
+}
+
+/* =========================
+   TITLES
+========================= */
+.boxing-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .boxing-content h1 {
+    font-size: 32px;
+  }
+
+  .boxing-space-grid,
+  .objectives-big-grid,
+  .workshops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .space-card {
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .boxing-content p {
+    font-size: 14px;
+  }
+
+  .boxing-buttons button {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .boxing-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .workshop-card img {
+    height: 200px;
+  }
+}

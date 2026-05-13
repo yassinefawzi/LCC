@@ -24,7 +24,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="/courses">Courses</a>
-            </li>zz
+            </li>
             <li>
               <a href="#contact">Contact</a>
             </li>
